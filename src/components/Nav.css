@@ -1,0 +1,15 @@
+.navbar {
+    display: inline-block;
+    background: #ccc;
+    width: 100%;
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar li {
+    list-style: none;   
+}
+.navbar a {
+    text-decoration: none;
+}

@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav'
+import Person from './components/Person'
+
+const headerObj ={
+  home: "Home",
+  about: "About",
+  contact: "Contact",
+  faqs: "FAQs"
+}
+
+const footerObj ={
+  home: "instagram",
+  about: "facebook",
+  contact: "twitter",
+  faqs: "youtube"
+}
+const people = [
+  {firstName:"Ammar", age: 27},
+  {firstName:"Motaz", age: 25},
+  {firstName:"AboBakr", age: 23},
+  {firstName:"Amna", age: 24},
+  {firstName:"Ali", age: 32},
+  {firstName:"Bahaa", age: 23},
+  {firstName:"Raneen", age: 34},
+]
+
+const arr = [headerObj, footerObj, footerObj, headerObj]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {people.map(person => <Person {...person}/>)}
     </div>
   );
 }
